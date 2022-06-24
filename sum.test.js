@@ -82,9 +82,7 @@ it("chech whether fruits contain mango",()=>{
 
 //
 
-// it("should not throw an error",()=>{
-//     expect(sum()).not.toThrow();
-// })
+
 
 describe("test for divide", ()=> {
     it("should throw an error", ()=> {
