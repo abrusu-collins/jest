@@ -1,4 +1,4 @@
-let sum =require("./sum");
+let {sum, divide} =require("./sum");
 //NB: Teas and it are the same
 //it means individual test
 //Basic testing
@@ -63,4 +63,34 @@ test("primitive",()=>{
 
 it("non primitive",()=>{
     expect({name:"collins"}).toEqual({name:"collins"})
+});
+
+//string matching (regex)
+
+it("Collins match",()=>{
+    expect("abrusu collins").toMatch(/collins/);
+});
+
+
+//Arrays and Itearables
+
+let fruits=["apple","mango","orange"];
+
+it("chech whether fruits contain mango",()=>{
+    expect(fruits).toContain("mango");
+});
+
+//
+
+// it("should not throw an error",()=>{
+//     expect(sum()).not.toThrow();
+// })
+
+describe("test for divide", ()=> {
+    it("should throw an error", ()=> {
+      function  errorFxn (){
+            throw  Error("There is an Error")
+        }
+        expect(errorFxn()).toThrow();
+    })
 })
