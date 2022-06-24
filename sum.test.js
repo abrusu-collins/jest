@@ -42,4 +42,25 @@ describe(" must be truthy",()=>{
 
     })})
 
+
+// dealing with floating numbers cos js is crazy
+
+it("float",()=>{
+
+    expect(.1+.2).toBeCloseTo(.3)
+})
+
+
+
+
 //toBe vs toEqual
+
+//toBe is for primitive types
+test("primitive",()=>{
+    expect("abrusu collins").toBe("abrusu collins");
+})
+//toEqual is for value of objects
+
+it("non primitive",()=>{
+    expect({name:"collins"}).toEqual({name:"collins"})
+})
